@@ -30,7 +30,7 @@ export function login() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
-    const url = `${window.BACKEND_PROTOCOL}://${window.BACKEND_HOST}:${window.BACKEND_PORT}/login`;
+    const url = `${window.BACKEND_PROTOCOL}://${window.BACKEND_HOST}/login`;
 
     fetch(url, {
         method: 'POST',
@@ -98,7 +98,7 @@ export function checkLoginStatus() {
 // Function to fetch inventory data from the backend
 export function fetchInventoryData() {
     console.log('Fetching inventory data');
-    const url = `${window.BACKEND_PROTOCOL}://${window.BACKEND_HOST}:${window.BACKEND_PORT}/inventory`;
+    const url = `${window.BACKEND_PROTOCOL}://${window.BACKEND_HOST}/inventory`;
     const token = localStorage.getItem('access_token');
 
     fetch(url, {
