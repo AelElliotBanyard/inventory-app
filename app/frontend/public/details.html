@@ -42,7 +42,7 @@
                 `;
                 document.getElementById('detailsBody').appendChild(errorRow);
             } else {
-                fetch(`${window.BACKEND_PROTOCOL}://${window.BACKEND_HOST}:${window.BACKEND_PORT}/inventory/${serverId}`, {
+                fetch(`${window.BACKEND_PROTOCOL}://${window.BACKEND_HOST}/inventory/${serverId}`, {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
