@@ -23,7 +23,7 @@ jobs:
 
       - name: 'Build Inventory Image'
         run: |
-            docker build ./Dockerfile.frontend --tag ghcr.io/aelelliotbanyard/inventory-app-frontend:latest
-            docker build ./Dockerfile.backend --tag ghcr.io/aelelliotbanyard/inventory-app-backend:latest
+            docker build -f ./Dockerfile.frontend --tag ghcr.io/aelelliotbanyard/inventory-app-frontend:latest .
+            docker build -f ./Dockerfile.backend --tag ghcr.io/aelelliotbanyard/inventory-app-backend:latest .
             docker push ghcr.io/aelelliotbanyard/inventory-app-frontend:latest
             docker push ghcr.io/aelelliotbanyard/inventory-app-backend:latest
